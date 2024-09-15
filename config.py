@@ -78,8 +78,8 @@ clip_norm = 5.0
 pre_log_step = 10
 adv_log_step = 20
 
-train_data = 'dataset/' + dataset + '.txt'
-test_data = 'dataset/testdata/' + dataset + '_test.txt'
+train_data = 'dataset/sample.txt'
+test_data = 'dataset/testdata/sample_test.txt'
 cat_train_data = 'dataset/' + dataset + '_cat{}.txt'
 cat_test_data = 'dataset/testdata/' + dataset + '_cat{}_test.txt'
 
