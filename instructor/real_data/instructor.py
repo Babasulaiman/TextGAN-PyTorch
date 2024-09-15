@@ -39,7 +39,6 @@ class BasicInstructor:
         # Dataloader
         try:
             self.train_data = GenDataIter(cfg.train_data)
-            print(f"train data: {self.train_data}")
             self.test_data = GenDataIter(cfg.test_data, if_test_data=True)
         except:
             pass
@@ -71,7 +70,7 @@ class BasicInstructor:
         self.self_bleu = BLEU('Self-BLEU', gram=[2, 3, 4], if_use=cfg.use_self_bleu)
         self.clas_acc = ACC(if_use=cfg.use_clas_acc)
         print(f"Train data: {self.train_data}, Test data: {self.test_data}")
-        self.ppl = PPL(self.train_data, self.test_data, n_gram=5, if_use=cfg.use_ppl)
+       # self.ppl = PPL(self.train_data, self.test_data, n_gram=5, if_use=cfg.use_ppl)
         self.all_metrics = [self.bleu, self.nll_gen, self.nll_div, self.self_bleu, self.ppl]
 
     def _run(self):
