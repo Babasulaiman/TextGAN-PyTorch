@@ -50,7 +50,7 @@ mu_type = 'ragan'  # rsgan lsgan ragan vanilla wgan hinge
 eval_type = 'Ra'  # standard, rsgan, nll, nll-f1, Ra, bleu3, bleu-f1
 d_type = 'Ra'  # S (Standard), Ra (Relativistic_average)
 vocab_size = 3000  # oracle: 5000, coco: 4683, emnlp: 5256, amazon_app_book: 6418, mr15: 6289
-max_seq_len = 115  # oracle: 20, coco: 37, emnlp: 51, amazon_app_book: 40
+max_seq_len = 60  # oracle: 20, coco: 37, emnlp: 51, amazon_app_book: 40
 ADV_train_epoch = 200  # SeqGAN, LeakGAN-200, RelGAN-3000
 extend_vocab_size = 0  # plus test data, only used for Classifier
 
@@ -60,7 +60,7 @@ evo_temp_step = 1
 temperature = 1
 
 # ===Basic Train===
-samples_num = 35  # 10000, mr15: 2000
+samples_num = 18  # 10000, mr15: 2000,
 MLE_train_epoch = 30  # SeqGAN-80, LeakGAN-8, RelGAN-150
 PRE_clas_epoch = 10
 inter_epoch = 15  # LeakGAN-10
