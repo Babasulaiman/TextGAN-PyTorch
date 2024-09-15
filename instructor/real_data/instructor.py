@@ -39,6 +39,7 @@ class BasicInstructor:
         # Dataloader
         try:
             self.train_data = GenDataIter(cfg.train_data)
+            print(f"train data: {self.train_data}")
             self.test_data = GenDataIter(cfg.test_data, if_test_data=True)
         except:
             pass
