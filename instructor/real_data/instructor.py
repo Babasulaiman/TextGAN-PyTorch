@@ -107,6 +107,7 @@ class BasicInstructor:
             loss = criterion(pred, target.view(-1))
             self.optimize(optimizer, loss, model)
             total_loss += loss.item()
+            print("Training data size:", len(self.train_data.loader))
         return total_loss / len(data_loader)
 
     def train_dis_epoch(self, model, data_loader, criterion, optimizer):
