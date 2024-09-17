@@ -71,7 +71,7 @@ class BasicInstructor:
         self.clas_acc = ACC(if_use=cfg.use_clas_acc)
         self.train_data = GenDataIter(cfg.train_data)
         self.test_data = GenDataIter(cfg.test_data, if_test_data=True)
-        print(f"Train data: {self.train_data}, Test data: {self.test_data}")
+       # print(f"Train data: {self.train_data}, Test data: {self.test_data}")
         self.ppl = PPL(self.train_data, self.test_data, n_gram=5, if_use=cfg.use_ppl)
         self.all_metrics = [self.bleu, self.nll_gen, self.nll_div, self.self_bleu, self.ppl]
 
@@ -107,7 +107,7 @@ class BasicInstructor:
             loss = criterion(pred, target.view(-1))
             self.optimize(optimizer, loss, model)
             total_loss += loss.item()
-            print("Training data size:", len(self.train_data.loader))
+           # print("Training data size:", len(self.train_data.loader))
         return total_loss / len(data_loader)
 
     def train_dis_epoch(self, model, data_loader, criterion, optimizer):
