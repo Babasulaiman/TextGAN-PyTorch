@@ -2,7 +2,7 @@ from analysis.loss_analyzer import LossAnalyzer
 
 def main():
     log_file_paths = [
-        "../log/",
+        "../log/log_0919_1032_57.txt",
     ]
 
     metrics_analyzers = [
