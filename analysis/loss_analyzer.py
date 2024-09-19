@@ -1,4 +1,4 @@
-from analysis.metrics_analyzer import MetricsAnalyzer
+from metrics_analyzer import MetricsAnalyzer
 
 class LossAnalyzer(MetricsAnalyzer):
 
