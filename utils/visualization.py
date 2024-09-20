@@ -58,7 +58,7 @@ if __name__ == '__main__':
     legend_text = ['RelGAN', 'LeakGAN']
 
     color_id = 0
-    data_name = 'g_loss'
+    data_name = 'gen_adv_loss'
     if_save = True
     # legend_text = log_file_list
 
