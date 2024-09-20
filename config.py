@@ -18,15 +18,15 @@ if_test = False
 CUDA = True
 multi_gpu = False
 if_save = True
-data_shuffle = True  # False
+data_shuffle = False  # False
 oracle_pretrain = False  # True
 gen_pretrain = False
 dis_pretrain = False
 clas_pretrain = False
 
-run_model = 'seqgan'  # seqgan, leakgan, maligan, jsdgan, relgan, evogan, sentigan, catgan, dpgan, dgsan, cot
+run_model = 'relgan'  # seqgan, leakgan, maligan, jsdgan, relgan, evogan, sentigan, catgan, dpgan, dgsan, cot
 k_label = 2  # num of labels, >=2
-gen_init = 'truncated_normal'  # normal, uniform, truncated_normal
+gen_init = 'normal'  # normal, uniform, truncated_normal
 dis_init = 'uniform'  # normal, uniform, truncated_normal
 
 # ===CatGAN===
@@ -61,7 +61,7 @@ temperature = 1
 
 # ===Basic Train===
 samples_num = 18  # 10000, mr15: 2000,
-MLE_train_epoch = 10  # SeqGAN-80, LeakGAN-8, RelGAN-150
+MLE_train_epoch = 5  # SeqGAN-80, LeakGAN-8, RelGAN-150
 PRE_clas_epoch = 10
 inter_epoch = 15  # LeakGAN-10
 batch_size = 4  # 64
