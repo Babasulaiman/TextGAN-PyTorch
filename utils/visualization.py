@@ -55,10 +55,10 @@ if __name__ == '__main__':
     log_file_root = 'log/'
     # Custom your log files in lists, no more than len(color_list)
     log_file_list = ['log_0920_0432_57', 'log_0919_1032_57']
-    legend_text = ['RelGAN']
+    legend_text = ['RelGAN', 'LeakGAN']
 
     color_id = 0
-    data_name = 'NLL_gen'
+    data_name = 'g_loss'
     if_save = True
     # legend_text = log_file_list
 
