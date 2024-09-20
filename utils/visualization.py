@@ -25,7 +25,7 @@ title_dict = {
 color_list = ['#e74c3c', '#e67e22', '#f1c40f', '#8e44ad', '#2980b9', '#27ae60', '#16a085']
 
 
-def plt_data(data, step, title, c_id, savefig=False):
+def plt_data(data, step, title, c_id, savefig=True):
     x = [i for i in range(step)]
     plt.plot(x, data, color=color_list[c_id], label=title)
     if savefig:
@@ -59,7 +59,7 @@ if __name__ == '__main__':
 
     color_id = 0
     data_name = 'NLL_gen'
-    if_save = False
+    if_save = True
     # legend_text = log_file_list
 
     assert data_name in title_dict.keys(), 'Error data name'
