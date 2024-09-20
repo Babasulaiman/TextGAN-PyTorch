@@ -58,7 +58,7 @@ if __name__ == '__main__':
     legend_text = ['SeqGAN', 'LeakGAN', 'RelGAN']
 
     color_id = 0
-    data_name = 'sample'
+    data_name = 'NLL_gen'
     if_save = False
     # legend_text = log_file_list
 
