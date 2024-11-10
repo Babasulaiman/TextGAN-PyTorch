@@ -18,15 +18,15 @@ if_test = False
 CUDA = True
 multi_gpu = False
 if_save = True
-data_shuffle = False  # False
+data_shuffle = True  # False
 oracle_pretrain = False  # True
 gen_pretrain = False
 dis_pretrain = False
 clas_pretrain = False
 
-run_model = 'relgan'  # seqgan, leakgan, maligan, jsdgan, relgan, evogan, sentigan, catgan, dpgan, dgsan, cot
+run_model = 'catgan'  # seqgan, leakgan, maligan, jsdgan, relgan, evogan, sentigan, catgan, dpgan, dgsan, cot
 k_label = 2  # num of labels, >=2
-gen_init = 'normal'  # normal, uniform, truncated_normal
+gen_init = 'truncated_normal'  # normal, uniform, truncated_normal
 dis_init = 'uniform'  # normal, uniform, truncated_normal
 
 # ===CatGAN===
@@ -38,7 +38,7 @@ lambda_fd = 0.0
 d_out_mean = True
 freeze_dis = False
 freeze_clas = False
-use_all_real_fake = False
+use_all_real_fake = True
 use_population = False
 
 # ===Oracle or Real, type===
@@ -49,8 +49,8 @@ loss_type = 'rsgan'  # rsgan lsgan ragan vanilla wgan hinge, for Discriminator (
 mu_type = 'ragan'  # rsgan lsgan ragan vanilla wgan hinge
 eval_type = 'Ra'  # standard, rsgan, nll, nll-f1, Ra, bleu3, bleu-f1
 d_type = 'Ra'  # S (Standard), Ra (Relativistic_average)
-vocab_size = 3000  # oracle: 5000, coco: 4683, emnlp: 5256, amazon_app_book: 6418, mr15: 6289
-max_seq_len = 60  # oracle: 20, coco: 37, emnlp: 51, amazon_app_book: 40
+vocab_size = 5000  # oracle: 5000, coco: 4683, emnlp: 5256, amazon_app_book: 6418, mr15: 6289
+max_seq_len = 50 # oracle: 20, coco: 37, emnlp: 51, amazon_app_book: 40
 ADV_train_epoch = 10  # SeqGAN, LeakGAN-200, RelGAN-3000
 extend_vocab_size = 0  # plus test data, only used for Classifier
 
@@ -60,11 +60,11 @@ evo_temp_step = 1
 temperature = 1
 
 # ===Basic Train===
-samples_num = 18  # 10000, mr15: 2000,
+samples_num = 10000  # 10000, mr15: 2000,
 MLE_train_epoch = 5  # SeqGAN-80, LeakGAN-8, RelGAN-150
-PRE_clas_epoch = 10
+PRE_clas_epoch = 100
 inter_epoch = 15  # LeakGAN-10
-batch_size = 4  # 64
+batch_size = 16  # 64
 start_letter = 1
 padding_idx = 0
 start_token = 'BOS'
@@ -84,7 +84,7 @@ cat_train_data = 'dataset/' + dataset + '_cat{}.txt'
 cat_test_data = 'dataset/testdata/' + dataset + '_cat{}_test.txt'
 
 # ===Metrics===
-use_nll_oracle = False
+use_nll_oracle = True
 use_nll_gen = True
 use_nll_div = True
 use_bleu = True
